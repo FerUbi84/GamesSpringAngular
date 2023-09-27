@@ -39,7 +39,7 @@ public class GeneroController {
         if (generos == null || generos.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         } else {
-            return ResponseEntity.status(HttpStatus.FOUND).body(generos);
+            return ResponseEntity.ok(generos);
         }
     }
 
@@ -52,7 +52,7 @@ public class GeneroController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Género não Encontrado");
         } else {
             System.out.println(genero);
-            return ResponseEntity.status(HttpStatus.FOUND).body(genero);
+            return ResponseEntity.ok(genero);
         }
     }
 
